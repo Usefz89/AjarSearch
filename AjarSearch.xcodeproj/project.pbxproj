@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA0065932770ADCC000882F5 /* AjarSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065922770ADCC000882F5 /* AjarSearchApp.swift */; };
+		CA0065952770ADCC000882F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065942770ADCC000882F5 /* ContentView.swift */; };
+		CA0065972770ADCE000882F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0065962770ADCE000882F5 /* Assets.xcassets */; };
+		CA00659A2770ADCE000882F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA0065992770ADCE000882F5 /* Preview Assets.xcassets */; };
+		CA0065A42770ADCE000882F5 /* AjarSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065A32770ADCE000882F5 /* AjarSearchTests.swift */; };
+		CA0065AE2770ADCE000882F5 /* AjarSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065AD2770ADCE000882F5 /* AjarSearchUITests.swift */; };
+		CA0065B02770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065AF2770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA0065A02770ADCE000882F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA0065872770ADCC000882F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA00658E2770ADCC000882F5;
+			remoteInfo = AjarSearch;
+		};
+		CA0065AA2770ADCE000882F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA0065872770ADCC000882F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA00658E2770ADCC000882F5;
+			remoteInfo = AjarSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA00658F2770ADCC000882F5 /* AjarSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AjarSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0065922770ADCC000882F5 /* AjarSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarSearchApp.swift; sourceTree = "<group>"; };
+		CA0065942770ADCC000882F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CA0065962770ADCE000882F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA0065992770ADCE000882F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA00659F2770ADCE000882F5 /* AjarSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AjarSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0065A32770ADCE000882F5 /* AjarSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarSearchTests.swift; sourceTree = "<group>"; };
+		CA0065A92770ADCE000882F5 /* AjarSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AjarSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0065AD2770ADCE000882F5 /* AjarSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarSearchUITests.swift; sourceTree = "<group>"; };
+		CA0065AF2770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA00658C2770ADCC000882F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA00659C2770ADCE000882F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0065A62770ADCE000882F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA0065862770ADCC000882F5 = {
+			isa = PBXGroup;
+			children = (
+				CA0065912770ADCC000882F5 /* AjarSearch */,
+				CA0065A22770ADCE000882F5 /* AjarSearchTests */,
+				CA0065AC2770ADCE000882F5 /* AjarSearchUITests */,
+				CA0065902770ADCC000882F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA0065902770ADCC000882F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA00658F2770ADCC000882F5 /* AjarSearch.app */,
+				CA00659F2770ADCE000882F5 /* AjarSearchTests.xctest */,
+				CA0065A92770ADCE000882F5 /* AjarSearchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA0065912770ADCC000882F5 /* AjarSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CA0065922770ADCC000882F5 /* AjarSearchApp.swift */,
+				CA0065942770ADCC000882F5 /* ContentView.swift */,
+				CA0065962770ADCE000882F5 /* Assets.xcassets */,
+				CA0065982770ADCE000882F5 /* Preview Content */,
+			);
+			path = AjarSearch;
+			sourceTree = "<group>";
+		};
+		CA0065982770ADCE000882F5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CA0065992770ADCE000882F5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA0065A22770ADCE000882F5 /* AjarSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0065A32770ADCE000882F5 /* AjarSearchTests.swift */,
+			);
+			path = AjarSearchTests;
+			sourceTree = "<group>";
+		};
+		CA0065AC2770ADCE000882F5 /* AjarSearchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0065AD2770ADCE000882F5 /* AjarSearchUITests.swift */,
+				CA0065AF2770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift */,
+			);
+			path = AjarSearchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA00658E2770ADCC000882F5 /* AjarSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0065B32770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearch" */;
+			buildPhases = (
+				CA00658B2770ADCC000882F5 /* Sources */,
+				CA00658C2770ADCC000882F5 /* Frameworks */,
+				CA00658D2770ADCC000882F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AjarSearch;
+			productName = AjarSearch;
+			productReference = CA00658F2770ADCC000882F5 /* AjarSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA00659E2770ADCE000882F5 /* AjarSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0065B62770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearchTests" */;
+			buildPhases = (
+				CA00659B2770ADCE000882F5 /* Sources */,
+				CA00659C2770ADCE000882F5 /* Frameworks */,
+				CA00659D2770ADCE000882F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0065A12770ADCE000882F5 /* PBXTargetDependency */,
+			);
+			name = AjarSearchTests;
+			productName = AjarSearchTests;
+			productReference = CA00659F2770ADCE000882F5 /* AjarSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA0065A82770ADCE000882F5 /* AjarSearchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0065B92770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearchUITests" */;
+			buildPhases = (
+				CA0065A52770ADCE000882F5 /* Sources */,
+				CA0065A62770ADCE000882F5 /* Frameworks */,
+				CA0065A72770ADCE000882F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0065AB2770ADCE000882F5 /* PBXTargetDependency */,
+			);
+			name = AjarSearchUITests;
+			productName = AjarSearchUITests;
+			productReference = CA0065A92770ADCE000882F5 /* AjarSearchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA0065872770ADCC000882F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CA00658E2770ADCC000882F5 = {
+						CreatedOnToolsVersion = 13.2;
+					};
+					CA00659E2770ADCE000882F5 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = CA00658E2770ADCC000882F5;
+					};
+					CA0065A82770ADCE000882F5 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = CA00658E2770ADCC000882F5;
+					};
+				};
+			};
+			buildConfigurationList = CA00658A2770ADCC000882F5 /* Build configuration list for PBXProject "AjarSearch" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA0065862770ADCC000882F5;
+			productRefGroup = CA0065902770ADCC000882F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA00658E2770ADCC000882F5 /* AjarSearch */,
+				CA00659E2770ADCE000882F5 /* AjarSearchTests */,
+				CA0065A82770ADCE000882F5 /* AjarSearchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA00658D2770ADCC000882F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA00659A2770ADCE000882F5 /* Preview Assets.xcassets in Resources */,
+				CA0065972770ADCE000882F5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA00659D2770ADCE000882F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0065A72770ADCE000882F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA00658B2770ADCC000882F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0065952770ADCC000882F5 /* ContentView.swift in Sources */,
+				CA0065932770ADCC000882F5 /* AjarSearchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA00659B2770ADCE000882F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0065A42770ADCE000882F5 /* AjarSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0065A52770ADCE000882F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0065B02770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift in Sources */,
+				CA0065AE2770ADCE000882F5 /* AjarSearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA0065A12770ADCE000882F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA00658E2770ADCC000882F5 /* AjarSearch */;
+			targetProxy = CA0065A02770ADCE000882F5 /* PBXContainerItemProxy */;
+		};
+		CA0065AB2770ADCE000882F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA00658E2770ADCC000882F5 /* AjarSearch */;
+			targetProxy = CA0065AA2770ADCE000882F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CA0065B12770ADCE000882F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA0065B22770ADCE000882F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA0065B42770ADCE000882F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AjarSearch/Preview Content\"";
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA0065B52770ADCE000882F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AjarSearch/Preview Content\"";
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA0065B72770ADCE000882F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AjarSearch.app/AjarSearch";
+			};
+			name = Debug;
+		};
+		CA0065B82770ADCE000882F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AjarSearch.app/AjarSearch";
+			};
+			name = Release;
+		};
+		CA0065BA2770ADCE000882F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AjarSearch;
+			};
+			name = Debug;
+		};
+		CA0065BB2770ADCE000882F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL788Y2E33;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niceApps.AjarSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AjarSearch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA00658A2770ADCC000882F5 /* Build configuration list for PBXProject "AjarSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0065B12770ADCE000882F5 /* Debug */,
+				CA0065B22770ADCE000882F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0065B32770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0065B42770ADCE000882F5 /* Debug */,
+				CA0065B52770ADCE000882F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0065B62770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0065B72770ADCE000882F5 /* Debug */,
+				CA0065B82770ADCE000882F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0065B92770ADCE000882F5 /* Build configuration list for PBXNativeTarget "AjarSearchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0065BA2770ADCE000882F5 /* Debug */,
+				CA0065BB2770ADCE000882F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA0065872770ADCC000882F5 /* Project object */;
+}
