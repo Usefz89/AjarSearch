@@ -11,7 +11,7 @@ import SwiftUI
 struct AjarSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ApartmentListView()
         }
     }
 }
