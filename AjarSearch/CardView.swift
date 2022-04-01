@@ -40,28 +40,28 @@ struct CardView: View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(apartment.name)
-                        .font(.headline)
+                    Text(apartment.name).font(.headline)
                     Spacer()
-                    Text( apartment.surfaceArea)
-                        .font(.headline)
+                    Text( apartment.surfaceArea).font(.headline)
                 }
                 Group {
                     Divider()
-                    Text("No. Of Rooms = \(apartment.numberOfRooms) Rooms").font(.headline)
-                    Text("No. Of Bathrooms = \(apartment.numberOfBathrooms)").font(.headline)
-                    Text("Floor Number = \(apartment.floor)").font(.headline)
+                    HStack {
+                        Text(apartment.numberOfRooms).font(.headline)
+                        Spacer()
+                        Text(apartment.numberOfBathrooms).font(.headline)
+                    }
                 }
-                
+
                 Group {
                     Divider()
-                    Text("Rent = \(apartment.price) KD")
-                        .font(.headline)
+                    HStack {
+                        Text("Rent = \(apartment.price) KD")
+                            .font(.headline)
+                        Spacer()
+                        Text(apartment.neighborhood).font(.headline)
+                    }
                 }
-                
-                Divider()
-                Text("Goverment = \(apartment.city)").font(.headline)
-                Text("City = \(apartment.neighborhood)").font(.headline)
             }
         }
         .padding([.top, .horizontal])
@@ -71,27 +71,10 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
    
+    static let apartment = ApartmentsManager().apartments.first!
     static var previews: some View {
-        CardView(apartment: ApartmentsManager().apartments.first!)
+        CardView(apartment: apartment)
     }
 }
 
-extension Image {
-    static func imageFromURL(_ url: URL) -> Image? {
-        if let data = try? Data(contentsOf: url), let uiImage = UIImage(data: data) {
-             return Image(uiImage: uiImage)
-        } else {
-           return nil
-        }
-    }
-}
 
-struct OptionalImage: View {
-    var image: Image?
-    
-    var body: some View {
-        if image != nil {
-            image
-        }
-    }
-}

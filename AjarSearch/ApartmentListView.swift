@@ -10,25 +10,60 @@ import SwiftUI
 struct ApartmentListView: View {
     @EnvironmentObject var apartManager: ApartmentsManager
     var apartments: [ApartmentDetail] {
-        apartManager.apartments
+        apartManager.filteredApartments
     }
     
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in
-                VStack {
-                    List {
-                        ForEach(apartments, id: \.self) { apartment in
-                            NavigationLink(destination: DetailView(apartment: apartment)) {
-                                CardView(apartment: apartment)
+            
+            // If apartments still not loaded show Progress View
+            if apartments.isEmpty {
+                ProgressView().scaleEffect(2)
+                .navigationTitle("List of Apartments")
+
+            } else {
+                // Showing the List of Apartments
+                GeometryReader { geometry in
+                    VStack {
+                        // Filter Items
+                        HStack {
+                            // Location Filter Picker
+                            Picker("City", selection: $apartManager.location) {
+                                ForEach(ApartmentsManager.selectedCities, id:\.self) { city in
+                                    Text(city)
+                                }
+                            }
+                            Spacer()
+                            // No.OfRooms Filter Picker
+                            Picker("No. Of Rooms", selection: $apartManager.noOfRooms) {
+                                ForEach(ApartmentsManager.numberOfRoomsArray, id:\.self) { room in
+                                    Text(room)
+                                }
+                            }
+                            
+                            
+                        }
+                        // List of Apartments
+                        List {
+                            
+                            ForEach(apartments, id: \.self) { apartment in
+                                NavigationLink(destination: DetailView(apartment: apartment)) {
+                                    CardView(apartment: apartment)
+                                        .aspectRatio(2/3, contentMode: .fit)
+                                }
                             }
                         }
+                        .refreshable {
+                            self.apartManager.getAppartments()
+                        }
+                        .listStyle(.plain)
                     }
-                    .listStyle(.plain)
                 }
+                .navigationTitle("List of Apartments")
+
             }
-            .navigationTitle("List of Apartments")
         }
+
     }
 }
 
