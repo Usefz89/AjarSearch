@@ -133,7 +133,7 @@ class NetworkController {
                     
                     // Get the list of img elements from the html. and loop through them
                     let imgElementArray = try doc.select("li[data-au=smallImg-AU][class=relative] > a > img").array()
-                    print("Image elements count = \(imgElementArray.count)")
+                  
                     for imgElement in imgElementArray {
                         
                         //Get the string Value from the element.

@@ -21,6 +21,10 @@
 		CA0065CA2771E305000882F5 /* ajarSample2.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C72771E304000882F5 /* ajarSample2.webp */; };
 		CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C82771E304000882F5 /* ajarSample4.webp */; };
 		CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C92771E305000882F5 /* ajarSample3.webp */; };
+		CA180BD027F71A5900399346 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA180BCC27F71A5900399346 /* ImageLoader.swift */; };
+		CA180BD127F71A5900399346 /* AsyncImageLegacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA180BCD27F71A5900399346 /* AsyncImageLegacy.swift */; };
+		CA180BD227F71A5900399346 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA180BCE27F71A5900399346 /* EnvironmentValues+ImageCache.swift */; };
+		CA180BD327F71A5900399346 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA180BCF27F71A5900399346 /* ImageCache.swift */; };
 		CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719027F5CFF100C143F7 /* NetworkController.swift */; };
 		CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CAE0719327F5D02200C143F7 /* SwiftSoup */; };
 		CAE0719627F5D03200C143F7 /* ApartmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */; };
@@ -62,6 +66,10 @@
 		CA0065C82771E304000882F5 /* ajarSample4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample4.webp; sourceTree = "<group>"; };
 		CA0065C92771E305000882F5 /* ajarSample3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample3.webp; sourceTree = "<group>"; };
 		CA180BC727F5E9C700399346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CA180BCC27F71A5900399346 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CA180BCD27F71A5900399346 /* AsyncImageLegacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageLegacy.swift; sourceTree = "<group>"; };
+		CA180BCE27F71A5900399346 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		CA180BCF27F71A5900399346 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		CAE0719027F5CFF100C143F7 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +132,7 @@
 				CA0065BE2771BDAD000882F5 /* Apartment.swift */,
 				CAE0719027F5CFF100C143F7 /* NetworkController.swift */,
 				CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */,
+				CA180BCB27F71A4500399346 /* AsyncImage  */,
 				CA0065962770ADCE000882F5 /* Assets.xcassets */,
 				CA0065982770ADCE000882F5 /* Preview Content */,
 			);
@@ -164,6 +173,17 @@
 				CA0065C82771E304000882F5 /* ajarSample4.webp */,
 			);
 			path = rentPhotos;
+			sourceTree = "<group>";
+		};
+		CA180BCB27F71A4500399346 /* AsyncImage  */ = {
+			isa = PBXGroup;
+			children = (
+				CA180BCD27F71A5900399346 /* AsyncImageLegacy.swift */,
+				CA180BCE27F71A5900399346 /* EnvironmentValues+ImageCache.swift */,
+				CA180BCF27F71A5900399346 /* ImageCache.swift */,
+				CA180BCC27F71A5900399346 /* ImageLoader.swift */,
+			);
+			path = "AsyncImage ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,12 +326,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA180BD327F71A5900399346 /* ImageCache.swift in Sources */,
 				CA0065952770ADCC000882F5 /* ApartmentListView.swift in Sources */,
+				CA180BD127F71A5900399346 /* AsyncImageLegacy.swift in Sources */,
 				CA0065C52771DC8B000882F5 /* DetailView.swift in Sources */,
 				CA0065BD2771BD92000882F5 /* CardView.swift in Sources */,
+				CA180BD227F71A5900399346 /* EnvironmentValues+ImageCache.swift in Sources */,
 				CAE0719627F5D03200C143F7 /* ApartmentsManager.swift in Sources */,
 				CA0065BF2771BDAD000882F5 /* Apartment.swift in Sources */,
 				CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */,
+				CA180BD027F71A5900399346 /* ImageLoader.swift in Sources */,
 				CA0065932770ADCC000882F5 /* AjarSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

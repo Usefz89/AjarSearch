@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct DetailView: View {
     var apartment: ApartmentDetail
     
@@ -19,16 +20,17 @@ struct DetailView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
                             .fill(Color(uiColor: .systemGray5))
-
+                        
                         TabView {
                             ForEach(apartment.imgArray, id: \.self) { url in
-                               asyncImage(url)
-                                .onTapGesture {
-                                    fullScreenMode.toggle()
-                                }
+                                asyncImage(url)
+                                    .onTapGesture {
+                                        fullScreenMode.toggle()
+                                    }
                             }
                         }
-                        .tabViewStyle(.page(indexDisplayMode: .automatic))
+                        .tabViewStyle(.page(indexDisplayMode: .always))
+                        
                         .padding()
                     }
                     .frame(height: geomtry.size.height / (fullScreenMode ? 1 : 3/2) )
@@ -40,7 +42,7 @@ struct DetailView: View {
                         .multilineTextAlignment(.trailing)
                         .padding()
                 }
-               
+                
             }
         }
     }
@@ -68,12 +70,19 @@ struct DetailView: View {
     }
     
     func asyncImage(_ url: URL) -> some View {
-        AsyncImage(url: url) { image in
-            image.resizable().scaledToFit()
-        } placeholder: {
-            ProgressView()
+        
+        AsyncImage(url: url) { phase in
+            if let image = phase.image, let image = image  {
+                image.resizable().scaledToFit() // Displays the loaded image.
+            } else if phase.error != nil {
+                Image(systemName: "exclamationmark.icloud").scaleEffect(2)// Indicates an error.
+            } else {
+                ProgressView().scaleEffect(2) // Acts as a placeholder.
+            }
         }
     }
+    
+    
 }
 
 struct DetailView_Previews: PreviewProvider {

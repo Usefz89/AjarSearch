@@ -9,7 +9,8 @@ import Foundation
 
 
 
-struct ApartmentDetail: Codable, Hashable {
+struct ApartmentDetail: Codable, Hashable, Identifiable {
+    var id = UUID()
     var link: URL
     var name: String
     var imgArray: [URL]

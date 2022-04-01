@@ -8,7 +8,7 @@
 import SwiftUI
 
 class ApartmentsManager: ObservableObject {
-    var apartments: [ApartmentDetail] = []
+    @Published var apartments: [ApartmentDetail] = []
     
     init() {
         self.getAppartments()
