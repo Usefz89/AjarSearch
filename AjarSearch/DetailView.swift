@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    var apartment = Apartments.example
+    var apartment: ApartmentDetail
     
     
     @State private var fullScreenMode = false
@@ -21,7 +21,7 @@ struct DetailView: View {
                             .fill(Color(uiColor: .systemGray5))
 
                         TabView {
-                            ForEach(apartment.imagesURLs, id: \.self) { url in
+                            ForEach(apartment.imgArray, id: \.self) { url in
                                asyncImage(url)
                                 .onTapGesture {
                                     fullScreenMode.toggle()
@@ -36,7 +36,7 @@ struct DetailView: View {
                     
                     informationBoard
                     Divider()
-                    Text(apartment.description)
+                    Text(apartment.name)
                         .multilineTextAlignment(.trailing)
                         .padding()
                 }
@@ -53,14 +53,14 @@ struct DetailView: View {
                     Text(apartment.name)
                         .font(.headline)
                     Spacer()
-                    Text( apartment.area)
+                    Text( apartment.surfaceArea)
                         .font(.headline)
                 }
                 Divider()
-                Text("No. Of Rooms = \(apartment.NoOfRooms) Rooms")
+                Text("No. Of Rooms = \(apartment.numberOfRooms) Rooms")
                     .font(.headline)
                 Divider()
-                Text("Rent = \(apartment.rent) KD")
+                Text("Rent = \(apartment.price) KD")
                     .font(.headline)
             }
         }
@@ -78,6 +78,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(apartment: ApartmentsManager().apartments.first!)
     }
 }

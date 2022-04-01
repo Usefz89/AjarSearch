@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ApartmentListView: View {
-    var apartments = Apartments.apartmentsExample
+    @EnvironmentObject var apartManager: ApartmentsManager
+    var apartments: [ApartmentDetail] {
+        apartManager.apartments
+    }
     
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
                     List {
-                        ForEach(apartments) { apartment in
+                        ForEach(apartments, id: \.self) { apartment in
                             NavigationLink(destination: DetailView(apartment: apartment)) {
                                 CardView(apartment: apartment)
                             }

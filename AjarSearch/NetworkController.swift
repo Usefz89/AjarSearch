@@ -1,0 +1,178 @@
+//
+//  NetworkController.swift
+//  AjarSearch
+//
+//  Created by yousef zuriqi on 5/2/20.
+//  Copyright © 2020 yousef zuriqi. All rights reserved.
+//
+
+import Foundation
+import SwiftSoup
+
+class NetworkController {
+    
+    static var shared = NetworkController()
+    
+    var apartments: [ApartmentDetail] = []
+    var apartmentDetail: ApartmentDetail?
+    
+    func loadApartments() {
+        
+        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let orderFileURL = documentDirectoryURL.appendingPathComponent("apartments").appendingPathExtension("json")
+        
+        if let data = try? Data(contentsOf: orderFileURL) {
+            let jsonDecoder = JSONDecoder()
+            apartments = (try? jsonDecoder.decode([ApartmentDetail].self, from: data)) ?? []
+        }
+    }
+    
+    //    func saveToCloud(apartments: ApartmentsStruct) {
+    //
+    //        var ref: DocumentReference? = nil
+    //        let db = Firestore.firestore()
+    //
+    //        ref = db.collection("apartments").addDocument(data: ["apartments": apartments])
+    //
+    //    }
+    
+    
+    
+    func saveApartments() {
+        
+        let documentDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let orderFileURL = documentDirectoryURL.appendingPathComponent("apartments").appendingPathExtension("json")
+        
+        
+        let jsonEncoder = JSONEncoder()
+        
+        if let data = try? jsonEncoder.encode(apartments) {
+            
+            try? data.write(to: orderFileURL)
+            
+        }
+        
+    }
+    
+    //    func autoLogin() {
+    //        let url = URL(String:"")
+    //    }
+    
+    func parseHtml (number: Int, completion: @escaping  ([ApartmentDetail]?) -> Void ) {
+        //        let group = DispatchGroup()
+        //        group.enter()
+        let url = URL(string: "https://kw.opensooq.com/en/real-estate-for-rent/apartments-for-rent?page=\(number)&per-page=30")!
+        
+        do {
+            // Parse the html document
+            let html = try String(contentsOf: url)
+            let doc: Document = try SwiftSoup.parse(html)
+            
+            // Get the list of apartments in html and convert it to array.
+            let apartmentsList = try  doc.select("li[data-key]").array()
+            
+            // For each apartment get the required information.
+            for apartment in apartmentsList {
+                // Go to the link for the apartment.
+                let linkTag = try apartment.select("div > h2 > a").first()
+                // Get the link in string.
+                let linkString = try linkTag?.attr("href") ?? ""
+                // Get the full url path in string.
+                let linkStringComplete = "https://kw.opensooq.com" + linkString
+                // Convert the url string to URL.
+                if let link = URL(string: linkStringComplete ) {
+                    
+                    // Parse the html document.
+                    let html = try String(contentsOf: link)
+                    let doc = try SwiftSoup.parse(html)
+                    
+                    // Get the description of the apartment
+                    let name = try doc.select("h1[class=postSpanTitle noEmojiText postTitle mb8]").first()?.text() ?? ""
+                    
+                    // Get the phone number.
+                    let phoneNumberElement = try doc.select("span[class=showPhone inline ltr cursor noWrap").first()
+                    let phoneNumber = try phoneNumberElement?.attr("data-phone-id") ?? ""
+                    
+                    // Get the number of rooms.
+                    let numberOfRooms = try doc.select("li[class=inline vTop relative mb15][data-icon=PostDynamicAttribute[Rooms]] > a")
+                        .first()?.text() ?? ""
+                    //Get the number of Bathrooms
+                    let numberOfBathrooms = try doc.select("li[class=inline vTop relative mb15][data-icon=PostDynamicAttribute[Bathrooms]] > a")
+                        .first()?.text() ?? ""
+                    
+                    // Get the surface area of the apartment
+                    let surfaceArea = try doc.select("li[class=inline vTop relative mb15][data-icon=PostDynamicAttribute[Surface]] > a")
+                        .first()?.text() ?? ""
+                    
+                    // Get the Floor number of the apartment.
+                    let floor = try doc.select("li[class=inline vTop relative mb15][data-icon=PostDynamicAttribute[Floors]] > a")
+                        .first()?.text() ?? ""
+                    
+                    // Get the Rent Price
+                    let price = try doc.select("li[class=inline vTop relative mb15] > a > strong[class=priceCurrencyMiddle]")
+                        .first()?.text() ?? ""
+                    
+                    // Get the goverment name
+                    let city = try doc.select("li[class=inline vTop relative mb15] > a")
+                        .first()?.text() ?? ""
+                    
+                    // Get the City Name
+                    // The html parse is dubplicate for city and neighboorhood.
+                    // Thats why we got the array of elements then we chose the second element.
+                    // Which is the city.
+                    var neighborhood = ""
+                    let listOfElements = try doc.select("li[class=inline vTop relative mb15] > a").array()
+                    if listOfElements.count > 1 {
+                        neighborhood = try listOfElements[1].text()
+                        
+                    }
+                    
+                    // Get the images galleries.
+                    
+                    var imgArray:[URL] = []
+                    
+                    // Get the list of img elements from the html. and loop through them
+                    let imgElementArray = try doc.select("li[data-au=smallImg-AU][class=relative] > a > img").array()
+                    print("Image elements count = \(imgElementArray.count)")
+                    for imgElement in imgElementArray {
+                        
+                        //Get the string Value from the element.
+                        var imgStringURL = try imgElement.attr("src")
+                        
+                        // change the string value from 75x75 to 1024x0 to get the full resolution image
+                        // Get the start and end index of string slice 75x75
+                        let startIndex = imgStringURL.index(imgStringURL.startIndex, offsetBy: 44)
+                        let endIndex = imgStringURL.index(imgStringURL.startIndex, offsetBy: 49)
+                        
+                        // Add the 1024x0 before the endIndex
+                        imgStringURL.insert(contentsOf: "1024x0", at: endIndex)
+                        // Remove the 75x75 string from start index offset by 5
+                        imgStringURL.removeSubrange(startIndex ..< imgStringURL.index(startIndex, offsetBy: 5))
+                        
+                        // Convert to url.
+                        if let imgURL = URL(string: imgStringURL) {
+                            imgArray.append(imgURL)
+                        }
+                    }
+                    
+                    // Add the data to apartement instance.
+                    let apartment = ApartmentDetail(link: link, name: name, imgArray: imgArray, city: city, neighborhood: neighborhood, numberOfRooms: numberOfRooms, numberOfBathrooms: numberOfBathrooms, surfaceArea: surfaceArea, floor: floor, price: price, number: phoneNumber)
+                    apartments.append(apartment)
+                }
+            }
+            
+        }catch let error {
+            print(error)
+        }
+        //        group.leave()
+        
+        completion(apartments)
+        print("Success")
+        
+    }
+    
+    
+    
+    
+    
+}

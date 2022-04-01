@@ -16,12 +16,14 @@
 		CA0065B02770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065AF2770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift */; };
 		CA0065BD2771BD92000882F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065BC2771BD92000882F5 /* CardView.swift */; };
 		CA0065BF2771BDAD000882F5 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065BE2771BDAD000882F5 /* Apartment.swift */; };
-		CA0065C12771BE1E000882F5 /* Apartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065C02771BE1E000882F5 /* Apartments.swift */; };
 		CA0065C32771BEF6000882F5 /* rentSample.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C22771BEF5000882F5 /* rentSample.webp */; };
 		CA0065C52771DC8B000882F5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0065C42771DC8B000882F5 /* DetailView.swift */; };
 		CA0065CA2771E305000882F5 /* ajarSample2.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C72771E304000882F5 /* ajarSample2.webp */; };
 		CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C82771E304000882F5 /* ajarSample4.webp */; };
 		CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C92771E305000882F5 /* ajarSample3.webp */; };
+		CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719027F5CFF100C143F7 /* NetworkController.swift */; };
+		CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CAE0719327F5D02200C143F7 /* SwiftSoup */; };
+		CAE0719627F5D03200C143F7 /* ApartmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +56,14 @@
 		CA0065AF2770ADCE000882F5 /* AjarSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CA0065BC2771BD92000882F5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CA0065BE2771BDAD000882F5 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartment.swift; sourceTree = "<group>"; };
-		CA0065C02771BE1E000882F5 /* Apartments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apartments.swift; sourceTree = "<group>"; };
 		CA0065C22771BEF5000882F5 /* rentSample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = rentSample.webp; sourceTree = "<group>"; };
 		CA0065C42771DC8B000882F5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CA0065C72771E304000882F5 /* ajarSample2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample2.webp; sourceTree = "<group>"; };
 		CA0065C82771E304000882F5 /* ajarSample4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample4.webp; sourceTree = "<group>"; };
 		CA0065C92771E305000882F5 /* ajarSample3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample3.webp; sourceTree = "<group>"; };
+		CA180BC727F5E9C700399346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CAE0719027F5CFF100C143F7 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,13 +115,15 @@
 		CA0065912770ADCC000882F5 /* AjarSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CA180BC727F5E9C700399346 /* Info.plist */,
 				CA0065C62771E2BE000882F5 /* rentPhotos */,
 				CA0065922770ADCC000882F5 /* AjarSearchApp.swift */,
 				CA0065942770ADCC000882F5 /* ApartmentListView.swift */,
 				CA0065BC2771BD92000882F5 /* CardView.swift */,
 				CA0065C42771DC8B000882F5 /* DetailView.swift */,
 				CA0065BE2771BDAD000882F5 /* Apartment.swift */,
-				CA0065C02771BE1E000882F5 /* Apartments.swift */,
+				CAE0719027F5CFF100C143F7 /* NetworkController.swift */,
+				CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */,
 				CA0065962770ADCE000882F5 /* Assets.xcassets */,
 				CA0065982770ADCE000882F5 /* Preview Content */,
 			);
@@ -175,6 +182,9 @@
 			dependencies = (
 			);
 			name = AjarSearch;
+			packageProductDependencies = (
+				CAE0719327F5D02200C143F7 /* SwiftSoup */,
+			);
 			productName = AjarSearch;
 			productReference = CA00658F2770ADCC000882F5 /* AjarSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +257,9 @@
 				Base,
 			);
 			mainGroup = CA0065862770ADCC000882F5;
+			packageReferences = (
+				CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = CA0065902770ADCC000882F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,9 +308,10 @@
 			files = (
 				CA0065952770ADCC000882F5 /* ApartmentListView.swift in Sources */,
 				CA0065C52771DC8B000882F5 /* DetailView.swift in Sources */,
-				CA0065C12771BE1E000882F5 /* Apartments.swift in Sources */,
 				CA0065BD2771BD92000882F5 /* CardView.swift in Sources */,
+				CAE0719627F5D03200C143F7 /* ApartmentsManager.swift in Sources */,
 				CA0065BF2771BDAD000882F5 /* Apartment.swift in Sources */,
+				CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */,
 				CA0065932770ADCC000882F5 /* AjarSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +476,7 @@
 				DEVELOPMENT_TEAM = SL788Y2E33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AjarSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,6 +506,7 @@
 				DEVELOPMENT_TEAM = SL788Y2E33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AjarSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -625,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAE0719327F5D02200C143F7 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA0065872770ADCC000882F5 /* Project object */;
 }

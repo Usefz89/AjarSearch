@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
-     var apartment: Apartment
+    var apartment: ApartmentDetail
     
     var body: some View {
         ZStack {
@@ -27,7 +27,7 @@ struct CardView: View {
     
     //Async Image
     private var asyncImage: some View {
-        AsyncImage(url: apartment.thumbnailURL) { image  in
+        AsyncImage(url: apartment.imgArray.first) { image  in
             image.resizable().scaledToFit()
         } placeholder: {
             ProgressView()
@@ -43,15 +43,25 @@ struct CardView: View {
                     Text(apartment.name)
                         .font(.headline)
                     Spacer()
-                    Text( apartment.area)
+                    Text( apartment.surfaceArea)
                         .font(.headline)
                 }
+                Group {
+                    Divider()
+                    Text("No. Of Rooms = \(apartment.numberOfRooms) Rooms").font(.headline)
+                    Text("No. Of Bathrooms = \(apartment.numberOfBathrooms)").font(.headline)
+                    Text("Floor Number = \(apartment.floor)").font(.headline)
+                }
+                
+                Group {
+                    Divider()
+                    Text("Rent = \(apartment.price) KD")
+                        .font(.headline)
+                }
+                
                 Divider()
-                Text("No. Of Rooms = \(apartment.NoOfRooms) Rooms")
-                    .font(.headline)
-                Divider()
-                Text("Rent = \(apartment.rent) KD")
-                    .font(.headline)
+                Text("Goverment = \(apartment.city)").font(.headline)
+                Text("City = \(apartment.neighborhood)").font(.headline)
             }
         }
         .padding([.top, .horizontal])
@@ -62,7 +72,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
    
     static var previews: some View {
-        CardView(apartment: Apartments.example)
+        CardView(apartment: ApartmentsManager().apartments.first!)
     }
 }
 
