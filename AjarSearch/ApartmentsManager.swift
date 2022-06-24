@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
 
 class ApartmentsManager: ObservableObject {
     @Published var apartments: [Apartment] = []
@@ -61,6 +60,8 @@ class ApartmentsManager: ObservableObject {
     }
     
     // MARK: - USER INDENT
-    
+    func removeAllApartments() {
+        apartments.removeAll()
+    }
     
 }

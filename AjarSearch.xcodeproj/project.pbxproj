@@ -21,7 +21,6 @@
 		CA0065CA2771E305000882F5 /* ajarSample2.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C72771E304000882F5 /* ajarSample2.webp */; };
 		CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C82771E304000882F5 /* ajarSample4.webp */; };
 		CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C92771E305000882F5 /* ajarSample3.webp */; };
-		CA66F9A028232AC10036EEAA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CA66F99F28232AC10036EEAA /* FirebaseFirestore */; };
 		CA66F9A228232D890036EEAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA66F9A128232D890036EEAA /* GoogleService-Info.plist */; };
 		CA81C3DA27F73ED40021D8B0 /* cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81C3D927F73ED40021D8B0 /* cities.swift */; };
 		CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719027F5CFF100C143F7 /* NetworkController.swift */; };
@@ -77,7 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */,
-				CA66F9A028232AC10036EEAA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +190,6 @@
 			name = AjarSearch;
 			packageProductDependencies = (
 				CAE0719327F5D02200C143F7 /* SwiftSoup */,
-				CA66F99F28232AC10036EEAA /* FirebaseFirestore */,
 			);
 			productName = AjarSearch;
 			productReference = CA00658F2770ADCC000882F5 /* AjarSearch.app */;
@@ -268,7 +265,6 @@
 			mainGroup = CA0065862770ADCC000882F5;
 			packageReferences = (
 				CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				CA66F99E28232AC10036EEAA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CA0065902770ADCC000882F5 /* Products */;
 			projectDirPath = "";
@@ -655,14 +651,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CA66F99E28232AC10036EEAA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
@@ -674,11 +662,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CA66F99F28232AC10036EEAA /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA66F99E28232AC10036EEAA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
 		CAE0719327F5D02200C143F7 /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CAE0719227F5D02200C143F7 /* XCRemoteSwiftPackageReference "SwiftSoup" */;

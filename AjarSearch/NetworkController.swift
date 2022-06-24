@@ -19,15 +19,17 @@ class NetworkController {
     var cities = [String]()
     
     
-    
+    // Load the URL from AWS Lamda.
+    // Decoded the data to Apartment struct.
     func loadApartments(completion: @escaping(([Apartment]?) -> Void)) {
+        
         guard let url = URL(string: "https://74xtvtmfwf5nfmhdxnwnk42o6i0iveso.lambda-url.us-east-1.on.aws/hello")
-                
         
         else {
             print("Invalid URL")
             return
         }
+        
         URLSession.shared.dataTask(with: url) { data , response , error  in
             
             if let error = error {
