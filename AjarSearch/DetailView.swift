@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct DetailView: View {
-    var apartment: ApartmentDetail
+    var apartment: Apartment
     
     
     @State private var fullScreenMode = false

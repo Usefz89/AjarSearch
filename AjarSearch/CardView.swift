@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
-    var apartment: ApartmentDetail
+    var apartment: Apartment
     
     var body: some View {
         ZStack {

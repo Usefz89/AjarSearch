@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct ApartmentDetail: Codable, Hashable, Identifiable {
+struct Apartment: Codable, Hashable, Identifiable {
     var id = UUID()
     var link: URL
     var name: String
@@ -39,5 +39,9 @@ struct ApartmentDetail: Codable, Hashable, Identifiable {
 }
 
 struct ApartmentsStruct: Codable {
-    var apartments: [ApartmentDetail]
+    var apartments: [Apartment]
+    
+    enum CodingKeys: String, CodingKey {
+        case apartments = "resultApartments"
+    }
 }

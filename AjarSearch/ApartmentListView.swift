@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ApartmentListView: View {
     @EnvironmentObject var apartManager: ApartmentsManager
-    var apartments: [ApartmentDetail] {
+    
+   
+    var apartments: [Apartment] {
         apartManager.filteredApartments
     }
+    
     
     var body: some View {
         NavigationView {
@@ -57,13 +60,13 @@ struct ApartmentListView: View {
                             self.apartManager.getAppartments()
                         }
                         .listStyle(.plain)
+                       
                     }
                 }
                 .navigationTitle("List of Apartments")
 
             }
         }
-
     }
 }
 

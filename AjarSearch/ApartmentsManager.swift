@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 class ApartmentsManager: ObservableObject {
-    @Published var apartments: [ApartmentDetail] = []
+    @Published var apartments: [Apartment] = []
     @Published var location = "All"
     @Published var noOfRooms = "All"
     
     // Array of Apartments which is filtered based on Area and Size.
-    var filteredApartments: [ApartmentDetail] {
+    var filteredApartments: [Apartment] {
         if location == "All" && noOfRooms == "All"   {
             return apartments
         } else if location != "All" && noOfRooms == "All" {
@@ -38,18 +39,23 @@ class ApartmentsManager: ObservableObject {
     static let numberOfRoomsArray = ["All", "Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "5 Bedrooms", "6+ Bedrooms"]
     
     init() {
-        self.getAppartments()
+//        FirebaseApp.configure()
+//        let db = Firestore.firestore()
+        getAppartments()
+        
     }
     
     // Get the shared instance from NetworkController
     // Run the ParseHtml function.
     func getAppartments() {
-        let shared = NetworkController.shared
-        shared.parseHtml(number: 1) { [weak self] ApartmentDetailArray in
-            if let apartArray = ApartmentDetailArray {
+        NetworkController.shared.loadApartments { apartments in
+            if let apartments = apartments {
                 DispatchQueue.main.async {
-                    self?.apartments = apartArray
+                    self.apartments = apartments
+                    print(self.apartments)
                 }
+            } else {
+                print("No apartments from loadApartment function")
             }
         }
     }
