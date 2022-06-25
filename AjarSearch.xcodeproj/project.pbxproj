@@ -21,7 +21,6 @@
 		CA0065CA2771E305000882F5 /* ajarSample2.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C72771E304000882F5 /* ajarSample2.webp */; };
 		CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C82771E304000882F5 /* ajarSample4.webp */; };
 		CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C92771E305000882F5 /* ajarSample3.webp */; };
-		CA66F9A228232D890036EEAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA66F9A128232D890036EEAA /* GoogleService-Info.plist */; };
 		CA81C3DA27F73ED40021D8B0 /* cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81C3D927F73ED40021D8B0 /* cities.swift */; };
 		CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719027F5CFF100C143F7 /* NetworkController.swift */; };
 		CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CAE0719327F5D02200C143F7 /* SwiftSoup */; };
@@ -64,7 +63,6 @@
 		CA0065C82771E304000882F5 /* ajarSample4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample4.webp; sourceTree = "<group>"; };
 		CA0065C92771E305000882F5 /* ajarSample3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample3.webp; sourceTree = "<group>"; };
 		CA180BC727F5E9C700399346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CA66F9A128232D890036EEAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA81C3D927F73ED40021D8B0 /* cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cities.swift; sourceTree = "<group>"; };
 		CAE0719027F5CFF100C143F7 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsManager.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				CA180BC727F5E9C700399346 /* Info.plist */,
-				CA66F9A128232D890036EEAA /* GoogleService-Info.plist */,
 				CA0065C62771E2BE000882F5 /* rentPhotos */,
 				CA0065922770ADCC000882F5 /* AjarSearchApp.swift */,
 				CA0065942770ADCC000882F5 /* ApartmentListView.swift */,
@@ -288,7 +285,6 @@
 				CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */,
 				CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */,
 				CA0065972770ADCE000882F5 /* Assets.xcassets in Resources */,
-				CA66F9A228232D890036EEAA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,15 +475,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AjarSearch/Preview Content\"";
 				DEVELOPMENT_TEAM = SL788Y2E33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AjarSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AjarSearch ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,15 +505,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AjarSearch/Preview Content\"";
 				DEVELOPMENT_TEAM = SL788Y2E33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AjarSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AjarSearch ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
