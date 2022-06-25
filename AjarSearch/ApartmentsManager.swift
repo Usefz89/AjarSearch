@@ -37,15 +37,26 @@ class ApartmentsManager: ObservableObject {
     // List of Number Of rooms. to use it in Filter.
     static let numberOfRoomsArray = ["All", "Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "5 Bedrooms", "6+ Bedrooms"]
     
-    init() {
-//        FirebaseApp.configure()
-//        let db = Firestore.firestore()
-        getAppartments()
-        
+    enum ApartmentState {
+        case empty
+        case notEmpty
+        case filterIsEmpty
     }
     
-    // Get the shared instance from NetworkController
-    // Run the ParseHtml function.
+    var apartmentState: ApartmentState {
+        if apartments.isEmpty && filteredApartments.isEmpty {
+            return .empty
+        } else if !apartments.isEmpty && filteredApartments.isEmpty {
+            return  .filterIsEmpty
+        } else {
+            return  .notEmpty
+        }
+    }
+    
+    
+    init() { getAppartments() }
+    
+    // Run the loadApartment function from the shared instance of NetworkController.
     func getAppartments() {
         NetworkController.shared.loadApartments { apartments in
             if let apartments = apartments {
