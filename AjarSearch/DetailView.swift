@@ -44,7 +44,6 @@ struct DetailView: View {
                     
                     contactButton
                 }
-                
             }
         }
     }
@@ -99,10 +98,7 @@ struct DetailView: View {
                 .cornerRadius(10)
                 .foregroundColor(.white)
         }
-
     }
-    
-    
 }
 
 struct DetailView_Previews: PreviewProvider {
