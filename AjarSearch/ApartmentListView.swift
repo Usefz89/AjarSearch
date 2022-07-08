@@ -85,7 +85,7 @@ struct ApartmentListView: View {
                 // List of Apartments
                 List {
                     
-                    ForEach(apartments, id: \.self) { apartment in
+                    ForEach(apartments) { apartment in
                         NavigationLink(destination: DetailView(apartment: apartment)) {
                             CardView(apartment: apartment)
                                 .aspectRatio(2/3, contentMode: .fit)

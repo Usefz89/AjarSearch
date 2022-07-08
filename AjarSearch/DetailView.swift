@@ -22,8 +22,8 @@ struct DetailView: View {
                             .fill(Color(uiColor: .systemGray5))
                         
                         TabView {
-                            ForEach(apartment.imgArray, id: \.self) { url in
-                                asyncImage(url)
+                            ForEach(apartment.imgArray, id: \.self) { stringURL in
+                                asyncImage(URL(string: stringURL)!)
                             }
                         }
                         .tabViewStyle(.page(indexDisplayMode: .always))
@@ -88,7 +88,7 @@ struct DetailView: View {
     
     private var contactButton: some View {
         Button {
-            UIApplication.shared.open(apartment.link)
+            UIApplication.shared.open(URL(string:apartment.link)!)
             
         } label: {
             Label("Get Phone Number", systemImage: "phone.fill")

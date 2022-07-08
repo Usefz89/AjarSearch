@@ -10,10 +10,10 @@ import Foundation
 
 
 struct Apartment: Codable, Hashable, Identifiable {
-    var id = UUID()
-    var link: URL
+    var id: UUID
+    var link: String
     var name: String
-    var imgArray: [URL]
+    var imgArray: [String]
     var city: String
     var neighborhood: String
     var numberOfRooms: String
@@ -21,27 +21,27 @@ struct Apartment: Codable, Hashable, Identifiable {
     var surfaceArea: String
     var floor: String
     var price: String
-    var number: String
     
-    enum CodingKeys: String, CodingKey {
-        case link
-        case name
-        case imgArray = "img_array"
-        case city
-        case neighborhood
-        case numberOfRooms
-        case numberOfBathrooms
-        case surfaceArea
-        case floor
-        case price
-        case number
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case link
+//        case name
+//        case imgArray
+//        case city
+//        case neighborhood
+//        case numberOfRooms
+//        case numberOfBathrooms
+//        case surfaceArea
+//        case floor
+//        case price
+//        case number
+//    }
 }
 
-struct ApartmentsStruct: Codable {
-    var apartments: [Apartment]
-    
-    enum CodingKeys: String, CodingKey {
-        case apartments = "resultApartments"
-    }
-}
+//struct ApartmentsStruct: Codable {
+//    var apartments: [Apartment]
+//
+//    enum CodingKeys: String, CodingKey {
+//        case apartments = "resultApartments"
+//    }
+//}

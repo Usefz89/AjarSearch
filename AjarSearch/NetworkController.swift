@@ -23,7 +23,7 @@ class NetworkController {
     // Decoded the data to Apartment struct.
     func loadApartments(completion: @escaping(([Apartment]?) -> Void)) {
         
-        guard let url = URL(string: "https://74xtvtmfwf5nfmhdxnwnk42o6i0iveso.lambda-url.us-east-1.on.aws/hello")
+        guard let url = URL(string: "https://ajarsearch-vapro-api.herokuapp.com/apartments")
         
         else {
             print("Invalid URL")
@@ -41,8 +41,8 @@ class NetworkController {
             if let data = data {
                 print("There is data... Waiting for decoding")
                 do {
-                    let decodedData = try JSONDecoder().decode(ApartmentsStruct.self, from: data)
-                    completion(decodedData.apartments)
+                    let decodedData = try JSONDecoder().decode([Apartment].self, from: data)
+                    completion(decodedData)
                     print("Decoding is successful")
                     
                 } catch {

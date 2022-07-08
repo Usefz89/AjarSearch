@@ -27,7 +27,7 @@ struct CardView: View {
     
     //Async Image
     private var asyncImage: some View {
-        AsyncImage(url: apartment.imgArray.first) { image  in
+        AsyncImage(url: URL(string: apartment.imgArray.first ?? "")) { image  in
             image.resizable().scaledToFit()
         } placeholder: {
             ProgressView()
