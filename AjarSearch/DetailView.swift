@@ -60,11 +60,13 @@ struct DetailView: View {
                         .font(.headline)
                 }
                 Divider()
-                Text("No. Of Rooms = \(apartment.numberOfRooms) Rooms")
+                Text("No. Of Rooms = \(apartment.numberOfRooms)")
                     .font(.headline)
                 Divider()
-                Text("Rent = \(apartment.price) KD")
-                    .font(.headline)
+                if !apartment.price.isEmpty {
+                    Text("Rent = \(apartment.price) KD")
+                        .font(.headline)
+                }
             }
         }
         .padding([.top, .horizontal])
@@ -74,14 +76,20 @@ struct DetailView: View {
     func asyncImage(_ url: URL) -> some View {
         
         AsyncImage(url: url) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .scaledToFit()
-            } else if phase.error != nil {
+            switch phase {
+            case .success(let image):
+                image.resizable().scaledToFit()
+            case .failure(_):
                 Image(systemName: "exclamationmark.icloud").scaleEffect(3)// Indicates an error.
-            } else {
+            case .empty:
                 ProgressView().scaleEffect(2)
+            @unknown default:
+                Image(systemName: "exclamationmark.icloud").scaleEffect(3)// Indicates an error.
+
+
+
+                
+                
             }
         }
     }

@@ -21,7 +21,6 @@
 		CA0065CA2771E305000882F5 /* ajarSample2.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C72771E304000882F5 /* ajarSample2.webp */; };
 		CA0065CB2771E305000882F5 /* ajarSample4.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C82771E304000882F5 /* ajarSample4.webp */; };
 		CA0065CC2771E305000882F5 /* ajarSample3.webp in Resources */ = {isa = PBXBuildFile; fileRef = CA0065C92771E305000882F5 /* ajarSample3.webp */; };
-		CA81C3DA27F73ED40021D8B0 /* cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA81C3D927F73ED40021D8B0 /* cities.swift */; };
 		CAE0719127F5CFF100C143F7 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719027F5CFF100C143F7 /* NetworkController.swift */; };
 		CAE0719427F5D02200C143F7 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CAE0719327F5D02200C143F7 /* SwiftSoup */; };
 		CAE0719627F5D03200C143F7 /* ApartmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */; };
@@ -63,7 +62,6 @@
 		CA0065C82771E304000882F5 /* ajarSample4.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample4.webp; sourceTree = "<group>"; };
 		CA0065C92771E305000882F5 /* ajarSample3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ajarSample3.webp; sourceTree = "<group>"; };
 		CA180BC727F5E9C700399346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CA81C3D927F73ED40021D8B0 /* cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cities.swift; sourceTree = "<group>"; };
 		CAE0719027F5CFF100C143F7 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +124,6 @@
 				CA0065BE2771BDAD000882F5 /* Apartment.swift */,
 				CAE0719027F5CFF100C143F7 /* NetworkController.swift */,
 				CAE0719527F5D03200C143F7 /* ApartmentsManager.swift */,
-				CA81C3D927F73ED40021D8B0 /* cities.swift */,
 				CA0065962770ADCE000882F5 /* Assets.xcassets */,
 				CA0065982770ADCE000882F5 /* Preview Content */,
 			);
@@ -309,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA81C3DA27F73ED40021D8B0 /* cities.swift in Sources */,
 				CA0065952770ADCC000882F5 /* ApartmentListView.swift in Sources */,
 				CA0065C52771DC8B000882F5 /* DetailView.swift in Sources */,
 				CA0065BD2771BD92000882F5 /* CardView.swift in Sources */,

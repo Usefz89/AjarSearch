@@ -56,8 +56,11 @@ struct CardView: View {
                 Group {
                     Divider()
                     HStack {
-                        Text("Rent = \(apartment.price) KD")
-                            .font(.headline)
+                        // Check if there is price or not. 
+                        if !apartment.price.isEmpty {
+                            Text("Rent = \(apartment.price) KD")
+                                .font(.headline)
+                        }
                         Spacer()
                         Text(apartment.neighborhood).font(.headline)
                     }

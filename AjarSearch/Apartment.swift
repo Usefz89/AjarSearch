@@ -21,27 +21,4 @@ struct Apartment: Codable, Hashable, Identifiable {
     var surfaceArea: String
     var floor: String
     var price: String
-    
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case link
-//        case name
-//        case imgArray
-//        case city
-//        case neighborhood
-//        case numberOfRooms
-//        case numberOfBathrooms
-//        case surfaceArea
-//        case floor
-//        case price
-//        case number
-//    }
 }
-
-//struct ApartmentsStruct: Codable {
-//    var apartments: [Apartment]
-//
-//    enum CodingKeys: String, CodingKey {
-//        case apartments = "resultApartments"
-//    }
-//}

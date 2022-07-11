@@ -24,6 +24,7 @@ class NetworkController {
     func loadApartments(completion: @escaping(([Apartment]?) -> Void)) {
         
         guard let url = URL(string: "https://ajarsearch-vapro-api.herokuapp.com/apartments")
+//         guard let url = URL(string: "http://127.0.0.1:8080/apartments")
         
         else {
             print("Invalid URL")
