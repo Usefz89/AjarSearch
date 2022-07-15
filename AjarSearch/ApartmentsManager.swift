@@ -54,8 +54,21 @@ class ApartmentsManager: ObservableObject {
     }
     
     
-    init() { getAppartments() }
+    init() {
+        Task {
+           await getApartmentsAsync()
+        } }
     
+    func getApartmentsAsync() async {
+        if let apartments = await NetworkController.shared.loadApartmentsAsync() {
+            DispatchQueue.main.async {
+                self.apartments = apartments
+
+            }
+        } else {
+            print("No apartments from loadApartmentAsync")
+        }
+    }
     // Run the loadApartment function from the shared instance of NetworkController.
     func getAppartments() {
         NetworkController.shared.loadApartments { apartments in

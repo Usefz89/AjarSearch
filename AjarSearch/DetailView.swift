@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct DetailView: View {
-    var apartment: Apartment
+      var apartment: Apartment
     
     
     @State private var fullScreenMode = false
@@ -22,8 +22,13 @@ struct DetailView: View {
                             .fill(Color(uiColor: .systemGray5))
                         
                         TabView {
+                            
                             ForEach(apartment.imgArray, id: \.self) { stringURL in
-                                asyncImage(URL(string: stringURL)!)
+                                // ZStack fix bug with scrolling of images. 
+                                ZStack {
+                                    asyncImage(URL(string: stringURL))
+
+                                }
                             }
                         }
                         .tabViewStyle(.page(indexDisplayMode: .always))
@@ -72,8 +77,9 @@ struct DetailView: View {
         .padding([.top, .horizontal])
     }
     
+    
     //Display Image from URL
-    func asyncImage(_ url: URL) -> some View {
+    func asyncImage(_ url: URL?) -> some View {
         
         AsyncImage(url: url) { phase in
             switch phase {
@@ -85,11 +91,7 @@ struct DetailView: View {
                 ProgressView().scaleEffect(2)
             @unknown default:
                 Image(systemName: "exclamationmark.icloud").scaleEffect(3)// Indicates an error.
-
-
-
-                
-                
+ 
             }
         }
     }
@@ -109,8 +111,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(apartment: ApartmentsManager().apartments.first!)
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(apartment: ApartmentsManager().apartments.first!)
+//    }
+//}

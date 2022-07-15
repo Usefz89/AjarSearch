@@ -18,14 +18,36 @@ class NetworkController {
     var apartmentDetail: Apartment?
     var cities = [String]()
     
+    private init() {}
+    
     
     // Load the URL from AWS Lamda.
     // Decoded the data to Apartment struct.
+   
+    func loadApartmentsAsync() async  -> [Apartment]? {
+        do {
+            guard let url = URL(string: "https://newajarsearch-vapor-api.herokuapp.com/apartments")
+            else {return nil}
+            
+                let (data, _) = try await  URLSession.shared.data(from: url)
+                let apartments = try JSONDecoder().decode([Apartment].self, from: data)
+                return apartments
+               
+            
+        } catch {
+            print("❌ Error loading data: \(error)")
+            return nil
+        }
+        
+        
+        
+        
+    }
     func loadApartments(completion: @escaping(([Apartment]?) -> Void)) {
         
-        guard let url = URL(string: "https://ajarsearch-vapro-api.herokuapp.com/apartments")
-//         guard let url = URL(string: "http://127.0.0.1:8080/apartments")
-        
+        guard let url = URL(string: "https://newajarsearch-vapor-api.herokuapp.com/apartments")
+                //         guard let url = URL(string: "http://127.0.0.1:8080/apartments")
+                
         else {
             print("Invalid URL")
             return
@@ -49,7 +71,7 @@ class NetworkController {
                 } catch {
                     print(error)
                 }
-              
+                
             } else {
                 print("Invalid Data")
             }
