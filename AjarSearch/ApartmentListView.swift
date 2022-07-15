@@ -93,8 +93,7 @@ struct ApartmentListView: View {
                     }
                 }
                 .refreshable {
-                    apartManager.removeAllApartments()
-                    apartManager.getAppartments()
+                    await apartManager.getApartments()
                 }
                 .listStyle(.plain)
             }
